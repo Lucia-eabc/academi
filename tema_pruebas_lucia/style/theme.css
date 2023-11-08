@@ -48,7 +48,7 @@ h4,
 h5,
 h6 {
     font-weight: normal;
-    font-family: Century Gothic, Arial, Helvetica, sans-serif;
+    font-family: 'poppinsregular';
     color: var(--color_secondary);
 }
 .moodle-actionmenu[data-enhanced].show .menu a:hover,
