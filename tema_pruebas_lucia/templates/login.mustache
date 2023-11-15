@@ -14,53 +14,41 @@
     You should have received a copy of the GNU General Public License
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
-{{!
-    @template theme_boost/login
-
-    Login page template
-
-    Example context (json):
-    {
-        "output": {
-            "doctype": "<!DOCTYPE html>",
-            "page_title": "Login page",
-            "favicon": "favicon.ico",
-            "main_content": "<h1>Headers keep HTML validators happy</h1>"
-        }
-    }
-}}
+{{! @template theme_boost/login Login page template Example context (json): {
+"output": { "doctype": "<!DOCTYPE html>", "page_title": "Login page", "favicon":
+"favicon.ico", "main_content": "
+<h1>Headers keep HTML validators happy</h1>
+" } } }}
 {{> theme_boost/head }}
 
 <body {{{ bodyattributes }}}>
+  {{> core/local/toast/wrapper}}
 
-{{> core/local/toast/wrapper}}
-
-<div id="page-wrapper">
-
+  <div id="page-wrapper">
     {{{ output.standard_top_of_body_html }}}
 
     {{> theme_tema_pruebas_lucia/header }}
 
     <div id="page" class="container-fluid mt-0">
-        <div id="page-content" class="row">
-            <div id="region-main-box" class="col-12">
-                <section id="region-main" class="col-12 h-100" aria-label="{{#str}}content{{/str}}">
-                <div class="login-wrapper">
-                    <div class="login-container">
-                    {{{ output.main_content }}}
-                    </div>
-                </div>
-                </section>
+      <div id="page-content" class="row">
+        <div id="region-main-box" class="col-12">
+          <section
+            id="region-main"
+            class="col-12 h-100"
+            aria-label="{{#str}}content{{/str}}"
+          >
+            <div class="login-wrapper">
+              <div class="login-container">{{{ output.main_content }}}</div>
             </div>
+          </section>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-{{> theme_tema_pruebas_lucia/footer }}
-{{#js}}
-M.util.js_pending('theme_boost/loader');
-require(['theme_boost/loader'], function() {
-  M.util.js_complete('theme_boost/loader');
-});
-{{/js}}
-
+  {{> theme_tema_pruebas_lucia/footer }}
+  {{#js}}
+  M.util.js_pending('theme_boost/loader'); require(['theme_boost/loader'],
+  function() { M.util.js_complete('theme_boost/loader'); });
+  {{/js}}
+</body>

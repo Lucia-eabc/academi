@@ -44,32 +44,8 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "oxygenbold";
-  src: url("[[oxygen-bold.woff2]]") format("woff2"),
-    url("[[oxygen-bold.woff]]") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "oxygenlight";
-  src: url("[[oxygen-light.woff2]]") format("woff2"),
-    url("[[oxygen-light.woff]]") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "oxygenregular";
-  src: url("[[oxygen-regular.woff2]]") format("woff2"),
-    url("[[oxygen-regular.woff]]") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
-  font-family: "oxygenbold";
+  font-family: "brandon_grotesquemedium";
   color: var(--color_storm_dust_approx);
   padding-top: 0;
   background: var(--white);
@@ -5028,8 +5004,8 @@ body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner {
   padding: 30px;
 }
 /*#header .popover-region i.icon:before {
-      color: var(--white);
-  }*/
+    color: var(--white);
+}*/
 #footer .footer-main .contact-info p a {
   color: var(--white);
 }
@@ -5094,3 +5070,12 @@ body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner {
 }
 
 /*end*/
+
+/* EDICIÓN DE PESOS Y TAMAÑOS TIPOGRÁFICOS */
+
+.moremenu .nav.nav-tabs .nav-link {
+  font-weight: 400;
+  font-size: larger;
+}
+
+/* END */

@@ -19,33 +19,32 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
- define(['jquery'], function($) {
-    var img = $("nav#header").find('.avatar').find('img[src$="/u/f2"]');
-    var src = img.attr('src');
-    img.attr('src', src + "_white");
-    /* ------- Check navbar button status -------- */
-    if ($("#header .navbar-nav button").attr('aria-expanded') === "true") {
-        $("#header .navbar-nav").find('button').addClass('is-active');
-    }
-    /* ------ Event for change the drawer navbar style  ------ */
-    $("#header .navbar-nav button").click(function() {
-       var This = $(this);
-        setTimeout(function() {
-            if (This.attr('aria-expanded') === "true") {
-                $("#header .navbar-nav").find('button').addClass('is-active');
-            } else {
-                $("#header .navbar-nav").find('button').removeClass('is-active');
-            }
-        }, 200);
-    });
+define(["jquery"], function ($) {
+  var img = $("nav#header").find(".avatar").find('img[src$="/u/f2"]');
+  var src = img.attr("src");
+  img.attr("src", src + "_white");
+  /* ------- Check navbar button status -------- */
+  if ($("#header .navbar-nav button").attr("aria-expanded") === "true") {
+    $("#header .navbar-nav").find("button").addClass("is-active");
+  }
+  /* ------ Event for change the drawer navbar style  ------ */
+  $("#header .navbar-nav button").click(function () {
+    var This = $(this);
+    setTimeout(function () {
+      if (This.attr("aria-expanded") === "true") {
+        $("#header .navbar-nav").find("button").addClass("is-active");
+      } else {
+        $("#header .navbar-nav").find("button").removeClass("is-active");
+      }
+    }, 200);
+  });
 
-    var foothtml = $('footer#page-footer').text();
-    if ($.trim(foothtml).length == 0) {
-        $('footer#page-footer').addClass('empty-footer');
-    }
-    var addhtml = $('.address-head').text();
-    if ($.trim(addhtml).length == 0) {
-        $('.address-head').addClass('empty-address');
-    }
-
+  var foothtml = $("footer#page-footer").text();
+  if ($.trim(foothtml).length == 0) {
+    $("footer#page-footer").addClass("empty-footer");
+  }
+  var addhtml = $(".address-head").text();
+  if ($.trim(addhtml).length == 0) {
+    $(".address-head").addClass("empty-address");
+  }
 });
