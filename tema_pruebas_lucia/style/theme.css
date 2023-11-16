@@ -44,8 +44,32 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "oxygenbold";
+  src: url("[[oxygen-bold.woff2]]") format("woff2"),
+    url("[[oxygen-bold.woff]]") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "oxygenlight";
+  src: url("[[oxygen-light.woff2]]") format("woff2"),
+    url("[[oxygen-light.woff]]") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "oxygenregular";
+  src: url("[[oxygen-regular.woff2]]") format("woff2"),
+    url("[[oxygen-regular.woff]]") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: "brandon_grotesquemedium";
+  font-family: "oxygenlight";
   color: var(--color_storm_dust_approx);
   padding-top: 0;
   background: var(--white);
