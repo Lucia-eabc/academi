@@ -5078,4 +5078,11 @@ body.limitedwidth.pagelayout-frontpage #page.drawers .main-inner {
   font-size: larger;
 }
 
+/* Botón login */
+#page-login-index .login-wrapper .login-form .login-form-submit .btn {
+  height: auto;
+  font-size: 1rem !important;
+  font-weight: 100;
+}
+
 /* END */
