@@ -15,20 +15,20 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Adds standarmoovePruebas to boost usertours
+ * Adds standarmoovepruebas to boost usertours
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 
 /**
- * Adds standarmoovePruebas to boost usertours
+ * Adds standarmoovepruebas to boost usertours
  *
  * @return bool
  */
-function xmldb_theme_standarmoovePruebas_install() {
+function xmldb_theme_standarmoovepruebas_install() {
     global $DB;
 
     $usertours = $DB->get_records('tool_usertours_tours');
@@ -38,7 +38,7 @@ function xmldb_theme_standarmoovePruebas_install() {
             $configdata = json_decode($usertour->configdata);
 
             if (in_array('boost', $configdata->filtervalues->theme)) {
-                $configdata->filtervalues->theme[] = 'standarmoovePruebas';
+                $configdata->filtervalues->theme[] = 'standarmoovepruebas';
             }
 
             $updatedata = new stdClass();

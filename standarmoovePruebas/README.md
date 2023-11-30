@@ -1,12 +1,12 @@
-# Moodle "standarmoovePruebas" theme repository
+# Moodle "standarmoovepruebas" theme repository
 
-standarmoovePruebas is Moodle's theme that makes online environments more clean and intuitive for learners and educators. Its intuitive layout is optimised for online learning, focusing on the things that matter - your learning activities and content.
+standarmoovepruebas is Moodle's theme that makes online environments more clean and intuitive for learners and educators. Its intuitive layout is optimised for online learning, focusing on the things that matter - your learning activities and content.
 
-standarmoovePruebas is built on Boostrap4 and Mustache templates.
+standarmoovepruebas is built on Boostrap4 and Mustache templates.
 
 # Documentation
 
-You can see the theme documentation on: https://github.com/willianmano/moodle-theme_standarmoovePruebas/wiki
+You can see the theme documentation on: https://github.com/willianmano/moodle-theme_standarmoovepruebas/wiki
 
 # Developed and maintained by
 

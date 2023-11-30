@@ -23,7 +23,7 @@
 define([
   "jquery",
   "core/modal_factory",
-  "theme_standarmoovePruebas/accessibilitysettings_modal",
+  "theme_standarmoovepruebas/accessibilitysettings_modal",
 ], function ($, ModalFactory, AccessibilitySettingsModal) {
   /**
    * Toogle region selectors.

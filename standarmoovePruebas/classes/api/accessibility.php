@@ -17,12 +17,12 @@
 /**
  * Accessibility API endpoints
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_standarmoovePruebas\api;
+namespace theme_standarmoovepruebas\api;
 
 use external_api;
 use external_function_parameters;
@@ -32,7 +32,7 @@ use external_value;
 /**
  * Accessibility API endpoints class
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -245,7 +245,7 @@ class accessibility extends external_api {
                 $fonttype = 'odafont';
             }
 
-            set_user_preference('themestandarmoovePruebassettings_fonttype', $fonttype);
+            set_user_preference('themestandarmoovepruebassettings_fonttype', $fonttype);
         }
 
         $enableaccessibilitytoolbar = null;
@@ -253,9 +253,9 @@ class accessibility extends external_api {
             $enableaccessibilitytoolbar = true;
         }
 
-        set_user_preference('themestandarmoovePruebassettings_enableaccessibilitytoolbar', $enableaccessibilitytoolbar);
+        set_user_preference('themestandarmoovepruebassettings_enableaccessibilitytoolbar', $enableaccessibilitytoolbar);
 
-        \core\notification::success(get_string('themesettingg:successfullysaved', 'theme_standarmoovePruebas'));
+        \core\notification::success(get_string('themesettingg:successfullysaved', 'theme_standarmoovepruebas'));
 
         return ['success' => true];
     }
@@ -289,8 +289,8 @@ class accessibility extends external_api {
      */
     public static function getthemesettings() {
         return [
-            'fonttype' => get_user_preferences('themestandarmoovePruebassettings_fonttype', 'default'),
-            'enableaccessibilitytoolbar' => get_user_preferences('themestandarmoovePruebassettings_enableaccessibilitytoolbar', false)
+            'fonttype' => get_user_preferences('themestandarmoovepruebassettings_fonttype', 'default'),
+            'enableaccessibilitytoolbar' => get_user_preferences('themestandarmoovepruebassettings_enableaccessibilitytoolbar', false)
         ];
     }
 

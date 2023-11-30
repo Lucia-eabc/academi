@@ -17,16 +17,16 @@
 /**
  * Language file.
  *
- * @package   theme_standarmoovePruebas
+ * @package   theme_standarmoovepruebas
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'standarmoovePruebas';
-$string['configtitle'] = 'standarmoovePruebas';
-$string['choosereadme'] = 'standarmoovePruebas is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
+$string['pluginname'] = 'standarmoovepruebas';
+$string['configtitle'] = 'standarmoovepruebas';
+$string['choosereadme'] = 'standarmoovepruebas is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
 
 $string['currentinparentheses'] = '(current)';
 $string['region-side-pre'] = 'Right';
@@ -167,10 +167,10 @@ $string['accessibility:sitecolor4'] = 'High contrast';
 // Data privacy.
 $string['privacy:metadata:preference:accessibilitystyles_fontsizeclass'] = 'The user\'s preference for font size.';
 $string['privacy:metadata:preference:accessibilitystyles_sitecolorclass'] = 'The user\'s preference for site color.';
-$string['privacy:metadata:preference:themestandarmoovePruebassettings_fonttype'] = 'The user\'s preference for font type.';
-$string['privacy:metadata:preference:themestandarmoovePruebassettings_enableaccessibilitytoolbar'] = 'The user\'s preference for enable the accessibility toolbar.';
+$string['privacy:metadata:preference:themestandarmoovepruebassettings_fonttype'] = 'The user\'s preference for font type.';
+$string['privacy:metadata:preference:themestandarmoovepruebassettings_enableaccessibilitytoolbar'] = 'The user\'s preference for enable the accessibility toolbar.';
 
 $string['privacy:accessibilitystyles_fontsizeclass'] = 'The current preference for the font size is: {$a}.';
 $string['privacy:accessibilitystyles_sitecolorclass'] = 'The current preference for the site color is: {$a}.';
-$string['privacy:themestandarmoovePruebassettings_fonttype'] = 'The current preference for the font type is: {$a}.';
-$string['privacy:themestandarmoovePruebassettings_enableaccessibilitytoolbar'] = 'The current preference for enable accessibility toolbar is to show it.';
+$string['privacy:themestandarmoovepruebassettings_fonttype'] = 'The current preference for the font type is: {$a}.';
+$string['privacy:themestandarmoovepruebassettings_enableaccessibilitytoolbar'] = 'The current preference for enable accessibility toolbar is to show it.';

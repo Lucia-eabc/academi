@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_standarmoovePruebas/accessibilitybar
+    @template theme_standarmoovepruebas/accessibilitybar
 
     Accessibility toolbar template
 
@@ -26,14 +26,14 @@
     <div class="bars">
       <div class="fontsize">
         <span
-          >{{#str}}accessibility:fontsize, theme_standarmoovePruebas{{/str}}</span
+          >{{#str}}accessibility:fontsize, theme_standarmoovepruebas{{/str}}</span
         >
         <ul>
           <li>
             <a
               class="btn btn-default"
               data-action="decrease"
-              title="{{#str}}accessibility:decreasefont, theme_standarmoovePruebas{{/str}}"
+              title="{{#str}}accessibility:decreasefont, theme_standarmoovepruebas{{/str}}"
               id="fontsize_dec"
               >A-</a
             >
@@ -42,7 +42,7 @@
             <a
               class="btn btn-default"
               data-action="reset"
-              title="{{#str}}accessibility:resetfont, theme_standarmoovePruebas{{/str}}"
+              title="{{#str}}accessibility:resetfont, theme_standarmoovepruebas{{/str}}"
               id="fontsize_reset"
               >A</a
             >
@@ -51,7 +51,7 @@
             <a
               class="btn btn-default"
               data-action="increase"
-              title="{{#str}}accessibility:increasefont, theme_standarmoovePruebas{{/str}}"
+              title="{{#str}}accessibility:increasefont, theme_standarmoovepruebas{{/str}}"
               id="fontsize_inc"
               >A+</a
             >
@@ -60,14 +60,14 @@
       </div>
       <div class="sitecolor">
         <span
-          >{{#str}}accessibility:sitecolor, theme_standarmoovePruebas{{/str}}</span
+          >{{#str}}accessibility:sitecolor, theme_standarmoovepruebas{{/str}}</span
         >
         <ul>
           <li>
             <a
               class="btn btn-default"
               data-action="reset"
-              title="{{#str}}accessibility:resetsitecolor, theme_standarmoovePruebas{{/str}}"
+              title="{{#str}}accessibility:resetsitecolor, theme_standarmoovepruebas{{/str}}"
               id="sitecolor_color1"
               >R</a
             >
@@ -76,7 +76,7 @@
             <a
               class="btn btn-default"
               data-action="sitecolor-color-2"
-              title="{{#str}}accessibility:sitecolor2, theme_standarmoovePruebas{{/str}}"
+              title="{{#str}}accessibility:sitecolor2, theme_standarmoovepruebas{{/str}}"
               id="sitecolor_color2"
               >A</a
             >
@@ -85,7 +85,7 @@
             <a
               class="btn btn-default"
               data-action="sitecolor-color-3"
-              title="{{#str}}accessibility:sitecolor3, theme_standarmoovePruebas{{/str}}"
+              title="{{#str}}accessibility:sitecolor3, theme_standarmoovepruebas{{/str}}"
               id="sitecolor_color3"
               >A</a
             >
@@ -94,7 +94,7 @@
             <a
               class="btn btn-default"
               data-action="sitecolor-color-4"
-              title="{{#str}}accessibility:sitecolor4, theme_standarmoovePruebas{{/str}}"
+              title="{{#str}}accessibility:sitecolor4, theme_standarmoovepruebas{{/str}}"
               id="sitecolor_color4"
               >A</a
             >
@@ -106,6 +106,6 @@
 </div>
 
 {{#js}}
-require(['theme_standarmoovePruebas/accessibilitybar'],
+require(['theme_standarmoovepruebas/accessibilitybar'],
 function(AccessibilityBar) { AccessibilityBar.init(); });
 {{/js}}

@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A drawer based layout for the standarmoovePruebas theme.
+ * A drawer based layout for the standarmoovepruebas theme.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -63,8 +63,8 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'userpicture' => $userimg->get_url($PAGE),
     'userfullname' => fullname($user),
-    'headerbuttons' => \theme_standarmoovePruebas\util\extras::get_mypublic_headerbuttons($context, $user),
-    'editprofileurl' => \theme_standarmoovePruebas\util\extras::get_mypublic_editprofile_url($user, $courseid),
+    'headerbuttons' => \theme_standarmoovepruebas\util\extras::get_mypublic_headerbuttons($context, $user),
+    'editprofileurl' => \theme_standarmoovepruebas\util\extras::get_mypublic_editprofile_url($user, $courseid),
     'usercanviewprofile' => $usercanviewprofile
 ];
 
@@ -96,8 +96,8 @@ if ($usercanviewprofile) {
     }
 }
 
-$themesettings = new \theme_standarmoovePruebas\util\settings();
+$themesettings = new \theme_standarmoovepruebas\util\settings();
 
 $templatecontext = array_merge($templatecontext, $themesettings->footer());
 
-echo $OUTPUT->render_from_template('theme_standarmoovePruebas/mypublic', $templatecontext);
+echo $OUTPUT->render_from_template('theme_standarmoovepruebas/mypublic', $templatecontext);

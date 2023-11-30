@@ -17,23 +17,23 @@
 /**
  * Overriden theme boost core renderer.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_standarmoovePruebas\output;
+namespace theme_standarmoovepruebas\output;
 
 use theme_config;
 use context_course;
 use moodle_url;
 use html_writer;
-use theme_standarmoovePruebas\output\core_course\activity_navigation;
+use theme_standarmoovepruebas\output\core_course\activity_navigation;
 
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -61,7 +61,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                                     gtag('config', 'GOOGLE-ANALYTICS-CODE');
                                 </script>";
 
-        $theme = theme_config::load('standarmoovePruebas');
+        $theme = theme_config::load('standarmoovepruebas');
 
         if (!empty($theme->settings->googleanalytics)) {
             $output .= str_replace("GOOGLE-ANALYTICS-CODE", trim($theme->settings->googleanalytics), $googleanalyticscode);
@@ -90,7 +90,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @since Moodle 2.5.1 2.6
      */
     public function body_attributes($additionalclasses = array()) {
-        $hasaccessibilitybar = get_user_preferences('themestandarmoovePruebassettings_enableaccessibilitytoolbar', '');
+        $hasaccessibilitybar = get_user_preferences('themestandarmoovepruebassettings_enableaccessibilitytoolbar', '');
         if ($hasaccessibilitybar) {
             $additionalclasses[] = 'hasaccessibilitybar';
 
@@ -105,7 +105,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             }
         }
 
-        $fonttype = get_user_preferences('themestandarmoovePruebassettings_fonttype', '');
+        $fonttype = get_user_preferences('themestandarmoovepruebassettings_fonttype', '');
         if ($fonttype) {
             $additionalclasses[] = $fonttype;
         }
@@ -168,7 +168,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string
      */
     public function get_theme_logo_url() {
-        $theme = theme_config::load('standarmoovePruebas');
+        $theme = theme_config::load('standarmoovepruebas');
 
         return $theme->setting_file_url('logo', 'logo');
     }
@@ -250,7 +250,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function favicon() {
         global $CFG;
 
-        $theme = theme_config::load('standarmoovePruebas');
+        $theme = theme_config::load('standarmoovepruebas');
 
         $favicon = $theme->setting_file_url('favicon', 'favicon');
 
@@ -417,7 +417,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string Final html code.
      */
     public function get_navbar_callbacks_data() {
-        $callbacks = get_plugins_with_function('standarmoovePruebas_additional_header', 'lib.php');
+        $callbacks = get_plugins_with_function('standarmoovepruebas_additional_header', 'lib.php');
 
         if (!$callbacks) {
             return '';

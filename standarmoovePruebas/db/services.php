@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme standarmoovePruebas functions and service definitions.
+ * Theme standarmoovepruebas functions and service definitions.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,30 +25,30 @@
 defined('MOODLE_INTERNAL') || die();
 
 $functions = array(
-    'theme_standarmoovePruebas_fontsize' => array(
-        'classname' => 'theme_standarmoovePruebas\api\accessibility',
-        'classpath' => 'theme_standarmoovePruebas/classes/api/accessibility.php',
+    'theme_standarmoovepruebas_fontsize' => array(
+        'classname' => 'theme_standarmoovepruebas\api\accessibility',
+        'classpath' => 'theme_standarmoovepruebas/classes/api/accessibility.php',
         'methodname' => 'fontsize',
         'description' => 'Increase or decrease the site font size.',
         'type' => 'write',
         'ajax' => true
     ),
-    'theme_standarmoovePruebas_sitecolor' => array(
-        'classname' => 'theme_standarmoovePruebas\api\accessibility',
+    'theme_standarmoovepruebas_sitecolor' => array(
+        'classname' => 'theme_standarmoovepruebas\api\accessibility',
         'methodname' => 'sitecolor',
         'description' => 'Changes the site color aspect.',
         'type' => 'write',
         'ajax' => true
     ),
-    'theme_standarmoovePruebas_savethemesettings' => array(
-        'classname' => 'theme_standarmoovePruebas\api\accessibility',
+    'theme_standarmoovepruebas_savethemesettings' => array(
+        'classname' => 'theme_standarmoovepruebas\api\accessibility',
         'methodname' => 'savethemesettings',
         'description' => 'Store the user theme settings.',
         'type' => 'write',
         'ajax' => true
     ),
-    'theme_standarmoovePruebas_getthemesettings' => array(
-        'classname' => 'theme_standarmoovePruebas\api\accessibility',
+    'theme_standarmoovepruebas_getthemesettings' => array(
+        'classname' => 'theme_standarmoovepruebas\api\accessibility',
         'methodname' => 'getthemesettings',
         'description' => 'Get the user theme settings.',
         'type' => 'read',

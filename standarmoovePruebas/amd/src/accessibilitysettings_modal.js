@@ -50,7 +50,7 @@ define([
 
     var request = Ajax.call([
       {
-        methodname: "theme_standarmoovePruebas_getthemesettings",
+        methodname: "theme_standarmoovepruebas_getthemesettings",
         args: {},
       },
     ]);
@@ -64,7 +64,7 @@ define([
     });
   };
 
-  AccessibilityModal.TYPE = "theme_standarmoovePruebas-themesettings_modal";
+  AccessibilityModal.TYPE = "theme_standarmoovepruebas-themesettings_modal";
   AccessibilityModal.prototype = Object.create(Modal.prototype);
   AccessibilityModal.prototype.constructor = AccessibilityModal;
 
@@ -83,7 +83,7 @@ define([
       function () {
         var request = Ajax.call([
           {
-            methodname: "theme_standarmoovePruebas_savethemesettings",
+            methodname: "theme_standarmoovepruebas_savethemesettings",
             args: {
               formdata: this.getFormData(),
             },
@@ -151,7 +151,7 @@ define([
     ModalRegistry.register(
       AccessibilityModal.TYPE,
       AccessibilityModal,
-      "theme_standarmoovePruebas/accessibilitysettings_modal"
+      "theme_standarmoovepruebas/accessibilitysettings_modal"
     );
     registered = true;
   }

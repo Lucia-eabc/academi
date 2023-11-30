@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_standarmoovePruebas/drawers
+    @template theme_standarmoovepruebas/drawers
 
     Boost drawer template.
 
@@ -49,7 +49,7 @@
         "addblockbutton": ""
     }
 }}
-{{> theme_standarmoovePruebas/head }}
+{{> theme_standarmoovepruebas/head }}
 
 <body {{{ bodyattributes }}}>
 {{> core/local/toast/wrapper}}
@@ -57,11 +57,11 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{> theme_standarmoovePruebas/navbar }}
+    {{> theme_standarmoovepruebas/navbar }}
 
     <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers drag-container bg-white">
         {{#slidercount}}
-            <div id="standarmoovePruebasslideshow" class="container-fluid">
+            <div id="standarmoovepruebasslideshow" class="container-fluid">
                 <div id="carousel-indicators" class="carousel slide carousel-fade" data-ride="carousel">
                     <ol class="carousel-indicators">
                         {{#slides}}
@@ -127,7 +127,7 @@
 
         {{#numbersfrontpage}}
             <section id="numbers">
-                <div class="standarmoovePruebas-container-fluid">
+                <div class="standarmoovepruebas-container-fluid">
                     <div class="row customer-area-l1 justify-content-center align-items-center ">
                         <div class="col-xl-5 col-lg-5 col-md-10">
                             <div class="sectionheading">
@@ -173,8 +173,8 @@
 
         {{#faqenabled}}
             <section id="faq" class="scale-up scale-up-show">
-                <div class="standarmoovePruebas-container-fluid">
-                    <h2>{{#str}}faq, theme_standarmoovePruebas{{/str}}</h2>
+                <div class="standarmoovepruebas-container-fluid">
+                    <h2>{{#str}}faq, theme_standarmoovepruebas{{/str}}</h2>
 
                     <div class="accordion" id="accordionFaq">
                         {{#faq}}
@@ -199,7 +199,7 @@
             </section>
         {{/faqenabled}}
 
-        {{> theme_standarmoovePruebas/footer }}
+        {{> theme_standarmoovepruebas/footer }}
     </div>
     {{{ output.standard_after_main_region_html }}}
 </div>

@@ -17,7 +17,7 @@
 /**
  * Theme functions.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -28,7 +28,7 @@
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_standarmoovePruebas_get_main_scss_content($theme) {
+function theme_standarmoovepruebas_get_main_scss_content($theme) {
     global $CFG;
 
     $scss = '';
@@ -40,19 +40,19 @@ function theme_standarmoovePruebas_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
     } else if ($filename == 'plain.scss') {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/plain.scss');
-    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_standarmoovePruebas', 'preset', 0, '/', $filename))) {
+    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_standarmoovepruebas', 'preset', 0, '/', $filename))) {
         $scss .= $presetfile->get_content();
     } else {
         // Safety fallback - maybe new installs etc.
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
     }
 
-    // standarmoovePruebas scss.
-    $standarmoovePruebasvariables = file_get_contents($CFG->dirroot . '/theme/standarmoovePruebas/scss/standarmoovePruebas/_variables.scss');
-    $standarmoovePruebas = file_get_contents($CFG->dirroot . '/theme/standarmoovePruebas/scss/default.scss');
+    // standarmoovepruebas scss.
+    $standarmoovepruebasvariables = file_get_contents($CFG->dirroot . '/theme/standarmoovepruebas/scss/standarmoovepruebas/_variables.scss');
+    $standarmoovepruebas = file_get_contents($CFG->dirroot . '/theme/standarmoovepruebas/scss/default.scss');
 
     // Combine them together.
-    $allscss = $standarmoovePruebasvariables . "\n" . $scss . "\n" . $standarmoovePruebas;
+    $allscss = $standarmoovepruebasvariables . "\n" . $scss . "\n" . $standarmoovepruebas;
 
     return $allscss;
 }
@@ -63,7 +63,7 @@ function theme_standarmoovePruebas_get_main_scss_content($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_standarmoovePruebas_get_extra_scss($theme) {
+function theme_standarmoovepruebas_get_extra_scss($theme) {
     $content = '';
 
     // Sets the login background image.
@@ -84,7 +84,7 @@ function theme_standarmoovePruebas_get_extra_scss($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_standarmoovePruebas_get_pre_scss($theme) {
+function theme_standarmoovepruebas_get_pre_scss($theme) {
     $scss = '';
     $configurable = [
         // Config key => [variableName, ...].
@@ -121,10 +121,10 @@ function theme_standarmoovePruebas_get_pre_scss($theme) {
  *
  * @return string compiled css
  */
-function theme_standarmoovePruebas_get_precompiled_css() {
+function theme_standarmoovepruebas_get_precompiled_css() {
     global $CFG;
 
-    return file_get_contents($CFG->dirroot . '/theme/standarmoovePruebas/style/moodle.css');
+    return file_get_contents($CFG->dirroot . '/theme/standarmoovepruebas/style/moodle.css');
 }
 
 /**
@@ -139,12 +139,12 @@ function theme_standarmoovePruebas_get_precompiled_css() {
  * @param array $options
  * @return mixed
  */
-function theme_standarmoovePruebas_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
-    $theme = theme_config::load('standarmoovePruebas');
+function theme_standarmoovepruebas_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
+    $theme = theme_config::load('standarmoovepruebas');
 
     if ($context->contextlevel == CONTEXT_SYSTEM &&
         ($filearea === 'logo' || $filearea === 'loginbgimg' || $filearea == 'favicon')) {
-        $theme = theme_config::load('standarmoovePruebas');
+        $theme = theme_config::load('standarmoovepruebas');
         // By default, theme files must be cache-able by both browsers and proxies.
         if (!array_key_exists('cacheability', $options)) {
             $options['cacheability'] = 'public';

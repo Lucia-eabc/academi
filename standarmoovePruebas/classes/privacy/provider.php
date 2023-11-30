@@ -17,12 +17,12 @@
 /**
  * Privacy provider
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_standarmoovePruebas\privacy;
+namespace theme_standarmoovepruebas\privacy;
 
 use \core_privacy\local\metadata\collection;
 use \core_privacy\local\metadata\provider as baseprovider;
@@ -32,7 +32,7 @@ use \core_privacy\local\request\writer;
 /**
  * Privacy provider class
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -47,9 +47,9 @@ class provider implements
     /** The user preference for the site color. */
     const SITECOLOR = 'accessibilitystyles_sitecolorclass';
     /** The user preference for the font type. */
-    const FONTTYPE = 'themestandarmoovePruebassettings_fonttype';
+    const FONTTYPE = 'themestandarmoovepruebassettings_fonttype';
     /** The user preference for the enable accessibility toolbar. */
-    const TOOLBAR = 'themestandarmoovePruebassettings_enableaccessibilitytoolbar';
+    const TOOLBAR = 'themestandarmoovepruebassettings_enableaccessibilitytoolbar';
 
     /**
      * Returns meta data about this system.
@@ -60,8 +60,8 @@ class provider implements
     public static function get_metadata(collection $items) : collection {
         $items->add_user_preference(self::FONTSIZE, 'privacy:metadata:preference:accessibilitystyles_fontsizeclass');
         $items->add_user_preference(self::SITECOLOR, 'privacy:metadata:preference:accessibilitystyles_sitecolorclass');
-        $items->add_user_preference(self::FONTTYPE, 'privacy:metadata:preference:themestandarmoovePruebassettings_fonttype');
-        $items->add_user_preference(self::TOOLBAR, 'privacy:metadata:preference:themestandarmoovePruebassettings_enableaccessibilitytoolbar');
+        $items->add_user_preference(self::FONTTYPE, 'privacy:metadata:preference:themestandarmoovepruebassettings_fonttype');
+        $items->add_user_preference(self::TOOLBAR, 'privacy:metadata:preference:themestandarmoovepruebassettings_enableaccessibilitytoolbar');
         return $items;
     }
 
@@ -75,29 +75,29 @@ class provider implements
         $toolbar = get_user_preferences(self::TOOLBAR, null, $userid);
         if (isset($toolbar)) {
             writer::export_user_preference(
-                'theme_standarmoovePruebas',
+                'theme_standarmoovepruebas',
                 self::TOOLBAR,
                 $toolbar,
-                get_string('privacy:themestandarmoovePruebassettings_enableaccessibilitytoolbar', 'theme_standarmoovePruebas', $toolbar)
+                get_string('privacy:themestandarmoovepruebassettings_enableaccessibilitytoolbar', 'theme_standarmoovepruebas', $toolbar)
             );
 
             $fontsize = get_user_preferences(self::FONTSIZE, null, $userid);
             if (isset($fontsize)) {
                 writer::export_user_preference(
-                    'theme_standarmoovePruebas',
+                    'theme_standarmoovepruebas',
                     self::FONTSIZE,
                     $fontsize,
-                    get_string('privacy:accessibilitystyles_fontsizeclass', 'theme_standarmoovePruebas', $fontsize)
+                    get_string('privacy:accessibilitystyles_fontsizeclass', 'theme_standarmoovepruebas', $fontsize)
                 );
             }
 
             $sitecolor = get_user_preferences(self::SITECOLOR, null, $userid);
             if (isset($sitecolor)) {
                 writer::export_user_preference(
-                    'theme_standarmoovePruebas',
+                    'theme_standarmoovepruebas',
                     self::SITECOLOR,
                     $sitecolor,
-                    get_string('privacy:accessibilitystyles_sitecolorclass', 'theme_standarmoovePruebas', $sitecolor)
+                    get_string('privacy:accessibilitystyles_sitecolorclass', 'theme_standarmoovepruebas', $sitecolor)
                 );
             }
         }
@@ -105,10 +105,10 @@ class provider implements
         $fonttype = get_user_preferences(self::FONTTYPE, null, $userid);
         if (isset($fonttype)) {
             writer::export_user_preference(
-                'theme_standarmoovePruebas',
+                'theme_standarmoovepruebas',
                 self::FONTTYPE,
                 $fonttype,
-                get_string('privacy:themestandarmoovePruebassettings_fonttype', 'theme_standarmoovePruebas', $fonttype)
+                get_string('privacy:themestandarmoovepruebassettings_fonttype', 'theme_standarmoovepruebas', $fonttype)
             );
         }
     }

@@ -17,23 +17,23 @@
 /**
  * Course renderer.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_standarmoovePruebas\output\core;
+namespace theme_standarmoovepruebas\output\core;
 
 use html_writer;
 use coursecat_helper;
 use stdClass;
 use core_course_list_element;
-use theme_standarmoovePruebas\util\course;
+use theme_standarmoovepruebas\util\course;
 
 /**
- * Renderers to align standarmoovePruebas's course elements to what is expect
+ * Renderers to align standarmoovepruebas's course elements to what is expect
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -217,7 +217,7 @@ class course_renderer extends \core_course_renderer {
             'contacts' => $coursecontacts
         ];
 
-        return $this->render_from_template('theme_standarmoovePruebas/standarmoovePruebas_coursecard', $data);
+        return $this->render_from_template('theme_standarmoovepruebas/standarmoovepruebas_coursecard', $data);
     }
 
     /**

@@ -77,7 +77,7 @@ define(["jquery", "core/ajax"], function (jQuery, Ajax) {
   AccessibilityBar.prototype.fontSize = function () {
     var request = Ajax.call([
       {
-        methodname: "theme_standarmoovePruebas_fontsize",
+        methodname: "theme_standarmoovepruebas_fontsize",
         args: {
           action: fontsizeCurrentAction,
         },
@@ -183,7 +183,7 @@ define(["jquery", "core/ajax"], function (jQuery, Ajax) {
   AccessibilityBar.prototype.siteColor = function () {
     var request = Ajax.call([
       {
-        methodname: "theme_standarmoovePruebas_sitecolor",
+        methodname: "theme_standarmoovepruebas_sitecolor",
         args: {
           action: sitecolorCurrentAction,
         },

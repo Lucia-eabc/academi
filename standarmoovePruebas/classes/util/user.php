@@ -17,12 +17,12 @@
 /**
  * User class utility class
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_standarmoovePruebas\util;
+namespace theme_standarmoovepruebas\util;
 
 use stdClass;
 use user_picture;
@@ -30,7 +30,7 @@ use user_picture;
 /**
  * User class utility class
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

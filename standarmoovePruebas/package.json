@@ -1,7 +1,7 @@
 {
-  "name": "theme-standarmoovePruebas-tasks",
+  "name": "theme-standarmoovepruebas-tasks",
   "version": "3.8.5",
-  "description": "Grunt tasks for Moodle standarmoovePruebas theme.",
+  "description": "Grunt tasks for Moodle standarmoovepruebas theme.",
   "main": "Gruntfile.js",
   "author": {
     "name": "Willian Mano",

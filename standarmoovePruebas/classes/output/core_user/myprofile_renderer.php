@@ -17,12 +17,12 @@
 /**
  * Overriden my profile core renderer.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_standarmoovePruebas\output\core_user;
+namespace theme_standarmoovepruebas\output\core_user;
 
 use core_user\output\myprofile\category;
 use core_user\output\myprofile\renderer;
@@ -30,7 +30,7 @@ use core_user\output\myprofile\renderer;
 /**
  * Overriden my profile core renderer.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

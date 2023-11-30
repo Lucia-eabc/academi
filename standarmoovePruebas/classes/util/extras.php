@@ -15,21 +15,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Custom standarmoovePruebas extras functions
+ * Custom standarmoovepruebas extras functions
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_standarmoovePruebas\util;
+namespace theme_standarmoovepruebas\util;
 
 use moodle_url;
 
 /**
  * Class to get some extras info in Moodle.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -64,7 +64,7 @@ class extras {
                     'class' => 'btn-header btn btn-sm btn-success'
                 ],
                 [
-                    'title' => get_string($contacttitle, 'theme_standarmoovePruebas'),
+                    'title' => get_string($contacttitle, 'theme_standarmoovepruebas'),
                     'url' => new \moodle_url('/message/index.php', [
                             'user1' => $USER->id,
                             'user2' => $user->id,

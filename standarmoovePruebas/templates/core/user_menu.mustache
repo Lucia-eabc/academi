@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_standarmoovePruebas/user_menu
+    @template theme_standarmoovepruebas/user_menu
 
     Action link template.
 
@@ -102,9 +102,9 @@
               class="dropdown-item"
               role="menuitem"
               tabindex="-1"
-              aria-label="{{#str}}themesettings:accessibility, theme_standarmoovePruebas{{/str}}"
+              aria-label="{{#str}}themesettings:accessibility, theme_standarmoovepruebas{{/str}}"
             >
-              {{#str}}themesettings:accessibility, theme_standarmoovePruebas{{/str}}
+              {{#str}}themesettings:accessibility, theme_standarmoovepruebas{{/str}}
             </a>
 
             <div class="dropdown-divider"></div>
@@ -153,7 +153,7 @@
   {{/unauthenticateduser}}
 </div>
 {{#js}}
-require(['core/usermenu', 'theme_standarmoovePruebas/accessibilitysettings'],
+require(['core/usermenu', 'theme_standarmoovepruebas/accessibilitysettings'],
 function(UserMenu, AccessibilitySettings) { UserMenu.init();
 AccessibilitySettings.init(); });
 {{/js}}

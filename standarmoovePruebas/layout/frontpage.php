@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Frontpage layout for the standarmoovePruebas theme.
+ * Frontpage layout for the standarmoovepruebas theme.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -115,14 +115,14 @@ $templatecontext = [
     'addblockbutton' => $addblockbutton
 ];
 
-$themesettings = new \theme_standarmoovePruebas\util\settings();
+$themesettings = new \theme_standarmoovepruebas\util\settings();
 
 $templatecontext = array_merge($templatecontext, $themesettings->footer());
 
 if (isloggedin()) {
-    echo $OUTPUT->render_from_template('theme_standarmoovePruebas/drawers', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_standarmoovepruebas/drawers', $templatecontext);
 } else {
     $templatecontext = array_merge($templatecontext, $themesettings->frontpage());
 
-    echo $OUTPUT->render_from_template('theme_standarmoovePruebas/frontpage', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_standarmoovepruebas/frontpage', $templatecontext);
 }

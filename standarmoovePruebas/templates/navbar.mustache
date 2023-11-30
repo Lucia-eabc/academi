@@ -14,7 +14,7 @@
     You should have received a copy of the GNU General Public License
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
-{{! @template theme_standarmoovePruebas/navbar This template renders the top
+{{! @template theme_standarmoovepruebas/navbar This template renders the top
 navbar. Example context (json): { "output": { "should_display_navbar_logo":
 true, "get_compact_logo_url": "http://placekitten.com/50/50", "custom_menu": "
 <li>..</li>
@@ -38,7 +38,7 @@ true, "get_compact_logo_url": "http://placekitten.com/50/50", "custom_menu": "
     class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0"
     data-toggler="drawers"
     data-action="toggle"
-    data-target="theme_standarmoovePruebas-drawers-primary"
+    data-target="theme_standarmoovepruebas-drawers-primary"
   >
     <span class="navbar-toggler-icon"></span>
     <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
@@ -75,7 +75,7 @@ true, "get_compact_logo_url": "http://placekitten.com/50/50", "custom_menu": "
     <div class="divider border-left h-75 align-self-center mx-1"></div>
     {{/output.search_box}}
     {{#langmenu}}
-    {{> theme_standarmoovePruebas/language_menu }}
+    {{> theme_standarmoovepruebas/language_menu }}
     <div class="divider border-left h-75 align-self-center mx-1"></div>
     {{/langmenu}}
     {{{ output.navbar_plugin_output }}}
@@ -92,11 +92,11 @@ true, "get_compact_logo_url": "http://placekitten.com/50/50", "custom_menu": "
 </nav>
 
 {{#secondarymoremenu}}
-<div class="secondary-navigation d-print-none standarmoovePruebas">
-  <div class="standarmoovePruebas-container-fluid">
+<div class="secondary-navigation d-print-none standarmoovepruebas">
+  <div class="standarmoovepruebas-container-fluid">
     {{> core/moremenu}}
   </div>
 </div>
 {{/secondarymoremenu}}
 
-{{> theme_standarmoovePruebas/primary-drawer-mobile }}
+{{> theme_standarmoovepruebas/primary-drawer-mobile }}

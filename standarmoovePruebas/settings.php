@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme standarmoovePruebas block settings file
+ * Theme standarmoovepruebas block settings file
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2017 Willian Mano http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -30,40 +30,40 @@ defined('MOODLE_INTERNAL') || die();
 if ($ADMIN->fulltree) {
 
     // Boost provides a nice setting page which splits settings onto separate tabs. We want to use it here.
-    $settings = new theme_boost_admin_settingspage_tabs('themesettingstandarmoovePruebas', get_string('configtitle', 'theme_standarmoovePruebas'));
+    $settings = new theme_boost_admin_settingspage_tabs('themesettingstandarmoovepruebas', get_string('configtitle', 'theme_standarmoovepruebas'));
 
     /*
     * ----------------------
     * General settings tab
     * ----------------------
     */
-    $page = new admin_settingpage('theme_standarmoovePruebas_general', get_string('generalsettings', 'theme_standarmoovePruebas'));
+    $page = new admin_settingpage('theme_standarmoovepruebas_general', get_string('generalsettings', 'theme_standarmoovepruebas'));
 
     // Logo file setting.
-    $name = 'theme_standarmoovePruebas/logo';
-    $title = get_string('logo', 'theme_standarmoovePruebas');
-    $description = get_string('logodesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/logo';
+    $title = get_string('logo', 'theme_standarmoovepruebas');
+    $description = get_string('logodesc', 'theme_standarmoovepruebas');
     $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'), 'maxfiles' => 1);
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'logo', 0, $opts);
     $page->add($setting);
 
     // Favicon setting.
-    $name = 'theme_standarmoovePruebas/favicon';
-    $title = get_string('favicon', 'theme_standarmoovePruebas');
-    $description = get_string('favicondesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/favicon';
+    $title = get_string('favicon', 'theme_standarmoovepruebas');
+    $description = get_string('favicondesc', 'theme_standarmoovepruebas');
     $opts = array('accepted_types' => array('.ico'), 'maxfiles' => 1);
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'favicon', 0, $opts);
     $page->add($setting);
 
     // Preset.
-    $name = 'theme_standarmoovePruebas/preset';
-    $title = get_string('preset', 'theme_standarmoovePruebas');
-    $description = get_string('preset_desc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/preset';
+    $title = get_string('preset', 'theme_standarmoovepruebas');
+    $description = get_string('preset_desc', 'theme_standarmoovepruebas');
     $default = 'default.scss';
 
     $context = context_system::instance();
     $fs = get_file_storage();
-    $files = $fs->get_area_files($context->id, 'theme_standarmoovePruebas', 'preset', 0, 'itemid, filepath, filename', false);
+    $files = $fs->get_area_files($context->id, 'theme_standarmoovepruebas', 'preset', 0, 'itemid, filepath, filename', false);
 
     $choices = [];
     foreach ($files as $file) {
@@ -78,18 +78,18 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     // Preset files setting.
-    $name = 'theme_standarmoovePruebas/presetfiles';
-    $title = get_string('presetfiles', 'theme_standarmoovePruebas');
-    $description = get_string('presetfiles_desc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/presetfiles';
+    $title = get_string('presetfiles', 'theme_standarmoovepruebas');
+    $description = get_string('presetfiles_desc', 'theme_standarmoovepruebas');
 
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'preset', 0,
         array('maxfiles' => 10, 'accepted_types' => array('.scss')));
     $page->add($setting);
 
     // Login page background image.
-    $name = 'theme_standarmoovePruebas/loginbgimg';
-    $title = get_string('loginbgimg', 'theme_standarmoovePruebas');
-    $description = get_string('loginbgimg_desc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/loginbgimg';
+    $title = get_string('loginbgimg', 'theme_standarmoovepruebas');
+    $description = get_string('loginbgimg_desc', 'theme_standarmoovepruebas');
     $opts = array('accepted_types' => array('.png', '.jpg', '.svg'));
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginbgimg', 0, $opts);
     $setting->set_updatedcallback('theme_reset_all_caches');
@@ -97,18 +97,18 @@ if ($ADMIN->fulltree) {
 
     // Variable $brand-color.
     // We use an empty default value because the default colour should come from the preset.
-    $name = 'theme_standarmoovePruebas/brandcolor';
-    $title = get_string('brandcolor', 'theme_standarmoovePruebas');
-    $description = get_string('brandcolor_desc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/brandcolor';
+    $title = get_string('brandcolor', 'theme_standarmoovepruebas');
+    $description = get_string('brandcolor_desc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configcolourpicker($name, $title, $description, '#0f47ad');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Variable $navbar-header-color.
     // We use an empty default value because the default colour should come from the preset.
-    $name = 'theme_standarmoovePruebas/secondarymenucolor';
-    $title = get_string('secondarymenucolor', 'theme_standarmoovePruebas');
-    $description = get_string('secondarymenucolor_desc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/secondarymenucolor';
+    $title = get_string('secondarymenucolor', 'theme_standarmoovepruebas');
+    $description = get_string('secondarymenucolor_desc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configcolourpicker($name, $title, $description, '#0f47ad');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -130,16 +130,16 @@ if ($ADMIN->fulltree) {
         'Epilogue' => 'Epilogue'
     ];
 
-    $name = 'theme_standarmoovePruebas/fontsite';
-    $title = get_string('fontsite', 'theme_standarmoovePruebas');
-    $description = get_string('fontsite_desc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/fontsite';
+    $title = get_string('fontsite', 'theme_standarmoovepruebas');
+    $description = get_string('fontsite_desc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configselect($name, $title, $description, 'Roboto', $fontsarr);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    $name = 'theme_standarmoovePruebas/enablecourseindex';
-    $title = get_string('enablecourseindex', 'theme_standarmoovePruebas');
-    $description = get_string('enablecourseindex_desc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/enablecourseindex';
+    $title = get_string('enablecourseindex', 'theme_standarmoovepruebas');
+    $description = get_string('enablecourseindex_desc', 'theme_standarmoovepruebas');
     $default = 1;
     $choices = array(0 => get_string('no'), 1 => get_string('yes'));
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
@@ -153,24 +153,24 @@ if ($ADMIN->fulltree) {
     * Advanced settings tab
     * ----------------------
     */
-    $page = new admin_settingpage('theme_standarmoovePruebas_advanced', get_string('advancedsettings', 'theme_standarmoovePruebas'));
+    $page = new admin_settingpage('theme_standarmoovepruebas_advanced', get_string('advancedsettings', 'theme_standarmoovepruebas'));
 
     // Raw SCSS to include before the content.
-    $setting = new admin_setting_scsscode('theme_standarmoovePruebas/scsspre',
-        get_string('rawscsspre', 'theme_standarmoovePruebas'), get_string('rawscsspre_desc', 'theme_standarmoovePruebas'), '', PARAM_RAW);
+    $setting = new admin_setting_scsscode('theme_standarmoovepruebas/scsspre',
+        get_string('rawscsspre', 'theme_standarmoovepruebas'), get_string('rawscsspre_desc', 'theme_standarmoovepruebas'), '', PARAM_RAW);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Raw SCSS to include after the content.
-    $setting = new admin_setting_scsscode('theme_standarmoovePruebas/scss', get_string('rawscss', 'theme_standarmoovePruebas'),
-        get_string('rawscss_desc', 'theme_standarmoovePruebas'), '', PARAM_RAW);
+    $setting = new admin_setting_scsscode('theme_standarmoovepruebas/scss', get_string('rawscss', 'theme_standarmoovepruebas'),
+        get_string('rawscss_desc', 'theme_standarmoovepruebas'), '', PARAM_RAW);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Google analytics block.
-    $name = 'theme_standarmoovePruebas/googleanalytics';
-    $title = get_string('googleanalytics', 'theme_standarmoovePruebas');
-    $description = get_string('googleanalyticsdesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/googleanalytics';
+    $title = get_string('googleanalytics', 'theme_standarmoovepruebas');
+    $description = get_string('googleanalyticsdesc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -182,21 +182,21 @@ if ($ADMIN->fulltree) {
     * Frontpage settings tab
     * -----------------------
     */
-    $page = new admin_settingpage('theme_standarmoovePruebas_frontpage', get_string('frontpagesettings', 'theme_standarmoovePruebas'));
+    $page = new admin_settingpage('theme_standarmoovepruebas_frontpage', get_string('frontpagesettings', 'theme_standarmoovepruebas'));
 
     // Disable teachers from cards.
-    $name = 'theme_standarmoovePruebas/disableteacherspic';
-    $title = get_string('disableteacherspic', 'theme_standarmoovePruebas');
-    $description = get_string('disableteacherspicdesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/disableteacherspic';
+    $title = get_string('disableteacherspic', 'theme_standarmoovepruebas');
+    $description = get_string('disableteacherspicdesc', 'theme_standarmoovepruebas');
     $default = 1;
     $choices = array(0 => get_string('no'), 1 => get_string('yes'));
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $page->add($setting);
 
     // Slideshow.
-    $name = 'theme_standarmoovePruebas/slidercount';
-    $title = get_string('slidercount', 'theme_standarmoovePruebas');
-    $description = get_string('slidercountdesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/slidercount';
+    $title = get_string('slidercount', 'theme_standarmoovepruebas');
+    $description = get_string('slidercountdesc', 'theme_standarmoovepruebas');
     $default = 0;
     $options = array();
     for ($i = 0; $i < 13; $i++) {
@@ -207,7 +207,7 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     // If we don't have an slide yet, default to the preset.
-    $slidercount = get_config('theme_standarmoovePruebas', 'slidercount');
+    $slidercount = get_config('theme_standarmoovepruebas', 'slidercount');
 
     if (!$slidercount) {
         $slidercount = $default;
@@ -216,22 +216,22 @@ if ($ADMIN->fulltree) {
     if ($slidercount) {
         for ($sliderindex = 1; $sliderindex <= $slidercount; $sliderindex++) {
             $fileid = 'sliderimage' . $sliderindex;
-            $name = 'theme_standarmoovePruebas/sliderimage' . $sliderindex;
-            $title = get_string('sliderimage', 'theme_standarmoovePruebas');
-            $description = get_string('sliderimagedesc', 'theme_standarmoovePruebas');
+            $name = 'theme_standarmoovepruebas/sliderimage' . $sliderindex;
+            $title = get_string('sliderimage', 'theme_standarmoovepruebas');
+            $description = get_string('sliderimagedesc', 'theme_standarmoovepruebas');
             $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'), 'maxfiles' => 1);
             $setting = new admin_setting_configstoredfile($name, $title, $description, $fileid, 0, $opts);
             $page->add($setting);
 
-            $name = 'theme_standarmoovePruebas/slidertitle' . $sliderindex;
-            $title = get_string('slidertitle', 'theme_standarmoovePruebas');
-            $description = get_string('slidertitledesc', 'theme_standarmoovePruebas');
+            $name = 'theme_standarmoovepruebas/slidertitle' . $sliderindex;
+            $title = get_string('slidertitle', 'theme_standarmoovepruebas');
+            $description = get_string('slidertitledesc', 'theme_standarmoovepruebas');
             $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_TEXT);
             $page->add($setting);
 
-            $name = 'theme_standarmoovePruebas/slidercap' . $sliderindex;
-            $title = get_string('slidercaption', 'theme_standarmoovePruebas');
-            $description = get_string('slidercaptiondesc', 'theme_standarmoovePruebas');
+            $name = 'theme_standarmoovepruebas/slidercap' . $sliderindex;
+            $title = get_string('slidercaption', 'theme_standarmoovepruebas');
+            $description = get_string('slidercaptiondesc', 'theme_standarmoovepruebas');
             $default = '';
             $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
             $page->add($setting);
@@ -241,47 +241,47 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_heading('slidercountseparator', '', '<hr>');
     $page->add($setting);
 
-    $name = 'theme_standarmoovePruebas/displaymarketingbox';
-    $title = get_string('displaymarketingboxes', 'theme_standarmoovePruebas');
-    $description = get_string('displaymarketingboxesdesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/displaymarketingbox';
+    $title = get_string('displaymarketingboxes', 'theme_standarmoovepruebas');
+    $description = get_string('displaymarketingboxesdesc', 'theme_standarmoovepruebas');
     $default = 1;
     $choices = array(0 => get_string('no'), 1 => get_string('yes'));
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $page->add($setting);
 
-    $displaymarketingbox = get_config('theme_standarmoovePruebas', 'displaymarketingbox');
+    $displaymarketingbox = get_config('theme_standarmoovepruebas', 'displaymarketingbox');
 
     if ($displaymarketingbox) {
         // Marketingheading.
-        $name = 'theme_standarmoovePruebas/marketingheading';
-        $title = get_string('marketingsectionheading', 'theme_standarmoovePruebas');
+        $name = 'theme_standarmoovepruebas/marketingheading';
+        $title = get_string('marketingsectionheading', 'theme_standarmoovepruebas');
         $default = 'Awesome App Features';
         $setting = new admin_setting_configtext($name, $title, '', $default);
         $page->add($setting);
 
         // Marketingcontent.
-        $name = 'theme_standarmoovePruebas/marketingcontent';
-        $title = get_string('marketingsectioncontent', 'theme_standarmoovePruebas');
-        $default = 'standarmoovePruebas is a Moodle template based on Boost with modern and creative design.';
+        $name = 'theme_standarmoovepruebas/marketingcontent';
+        $title = get_string('marketingsectioncontent', 'theme_standarmoovepruebas');
+        $default = 'standarmoovepruebas is a Moodle template based on Boost with modern and creative design.';
         $setting = new admin_setting_confightmleditor($name, $title, '', $default);
         $page->add($setting);
 
         for ($i = 1; $i < 5; $i++) {
             $filearea = "marketing{$i}icon";
-            $name = "theme_standarmoovePruebas/$filearea";
-            $title = get_string('marketingicon', 'theme_standarmoovePruebas', $i . '');
+            $name = "theme_standarmoovepruebas/$filearea";
+            $title = get_string('marketingicon', 'theme_standarmoovepruebas', $i . '');
             $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'));
             $setting = new admin_setting_configstoredfile($name, $title, '', $filearea, 0, $opts);
             $page->add($setting);
 
-            $name = "theme_standarmoovePruebas/marketing{$i}heading";
-            $title = get_string('marketingheading', 'theme_standarmoovePruebas', $i . '');
+            $name = "theme_standarmoovepruebas/marketing{$i}heading";
+            $title = get_string('marketingheading', 'theme_standarmoovepruebas', $i . '');
             $default = 'Lorem';
             $setting = new admin_setting_configtext($name, $title, '', $default);
             $page->add($setting);
 
-            $name = "theme_standarmoovePruebas/marketing{$i}content";
-            $title = get_string('marketingcontent', 'theme_standarmoovePruebas', $i . '');
+            $name = "theme_standarmoovepruebas/marketing{$i}content";
+            $title = get_string('marketingcontent', 'theme_standarmoovepruebas', $i . '');
             $default = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.';
             $setting = new admin_setting_confightmleditor($name, $title, '', $default);
             $page->add($setting);
@@ -292,29 +292,29 @@ if ($ADMIN->fulltree) {
     }
 
     // Enable or disable Numbers sections settings.
-    $name = 'theme_standarmoovePruebas/numbersfrontpage';
-    $title = get_string('numbersfrontpage', 'theme_standarmoovePruebas');
-    $description = get_string('numbersfrontpagedesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/numbersfrontpage';
+    $title = get_string('numbersfrontpage', 'theme_standarmoovepruebas');
+    $description = get_string('numbersfrontpagedesc', 'theme_standarmoovepruebas');
     $default = 1;
     $choices = array(0 => get_string('no'), 1 => get_string('yes'));
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $page->add($setting);
 
-    $numbersfrontpage = get_config('theme_standarmoovePruebas', 'numbersfrontpage');
+    $numbersfrontpage = get_config('theme_standarmoovepruebas', 'numbersfrontpage');
 
     if ($numbersfrontpage) {
-        $name = 'theme_standarmoovePruebas/numbersfrontpagecontent';
-        $title = get_string('numbersfrontpagecontent', 'theme_standarmoovePruebas');
-        $description = get_string('numbersfrontpagecontentdesc', 'theme_standarmoovePruebas');
-        $default = get_string('numbersfrontpagecontentdefault', 'theme_standarmoovePruebas');
+        $name = 'theme_standarmoovepruebas/numbersfrontpagecontent';
+        $title = get_string('numbersfrontpagecontent', 'theme_standarmoovepruebas');
+        $description = get_string('numbersfrontpagecontentdesc', 'theme_standarmoovepruebas');
+        $default = get_string('numbersfrontpagecontentdefault', 'theme_standarmoovepruebas');
         $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
         $page->add($setting);
     }
 
     // Enable FAQ.
-    $name = 'theme_standarmoovePruebas/faqcount';
-    $title = get_string('faqcount', 'theme_standarmoovePruebas');
-    $description = get_string('faqcountdesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/faqcount';
+    $title = get_string('faqcount', 'theme_standarmoovepruebas');
+    $description = get_string('faqcountdesc', 'theme_standarmoovepruebas');
     $default = 0;
     $options = array();
     for ($i = 0; $i < 11; $i++) {
@@ -323,17 +323,17 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
     $page->add($setting);
 
-    $faqcount = get_config('theme_standarmoovePruebas', 'faqcount');
+    $faqcount = get_config('theme_standarmoovepruebas', 'faqcount');
 
     if ($faqcount > 0) {
         for ($i = 1; $i <= $faqcount; $i++) {
-            $name = "theme_standarmoovePruebas/faqquestion{$i}";
-            $title = get_string('faqquestion', 'theme_standarmoovePruebas', $i . '');
+            $name = "theme_standarmoovepruebas/faqquestion{$i}";
+            $title = get_string('faqquestion', 'theme_standarmoovepruebas', $i . '');
             $setting = new admin_setting_configtext($name, $title, '', '');
             $page->add($setting);
 
-            $name = "theme_standarmoovePruebas/faqanswer{$i}";
-            $title = get_string('faqanswer', 'theme_standarmoovePruebas', $i . '');
+            $name = "theme_standarmoovepruebas/faqanswer{$i}";
+            $title = get_string('faqanswer', 'theme_standarmoovepruebas', $i . '');
             $setting = new admin_setting_confightmleditor($name, $title, '', '');
             $page->add($setting);
         }
@@ -349,75 +349,75 @@ if ($ADMIN->fulltree) {
     * Footer settings tab
     * --------------------
     */
-    $page = new admin_settingpage('theme_standarmoovePruebas_footer', get_string('footersettings', 'theme_standarmoovePruebas'));
+    $page = new admin_settingpage('theme_standarmoovepruebas_footer', get_string('footersettings', 'theme_standarmoovepruebas'));
 
     // Website.
-    $name = 'theme_standarmoovePruebas/website';
-    $title = get_string('website', 'theme_standarmoovePruebas');
-    $description = get_string('websitedesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/website';
+    $title = get_string('website', 'theme_standarmoovepruebas');
+    $description = get_string('websitedesc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $page->add($setting);
 
     // Mobile.
-    $name = 'theme_standarmoovePruebas/mobile';
-    $title = get_string('mobile', 'theme_standarmoovePruebas');
-    $description = get_string('mobiledesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/mobile';
+    $title = get_string('mobile', 'theme_standarmoovepruebas');
+    $description = get_string('mobiledesc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $page->add($setting);
 
     // Mail.
-    $name = 'theme_standarmoovePruebas/mail';
-    $title = get_string('mail', 'theme_standarmoovePruebas');
-    $description = get_string('maildesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/mail';
+    $title = get_string('mail', 'theme_standarmoovepruebas');
+    $description = get_string('maildesc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $page->add($setting);
 
     // Facebook url setting.
-    $name = 'theme_standarmoovePruebas/facebook';
-    $title = get_string('facebook', 'theme_standarmoovePruebas');
-    $description = get_string('facebookdesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/facebook';
+    $title = get_string('facebook', 'theme_standarmoovepruebas');
+    $description = get_string('facebookdesc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $page->add($setting);
 
     // Twitter url setting.
-    $name = 'theme_standarmoovePruebas/twitter';
-    $title = get_string('twitter', 'theme_standarmoovePruebas');
-    $description = get_string('twitterdesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/twitter';
+    $title = get_string('twitter', 'theme_standarmoovepruebas');
+    $description = get_string('twitterdesc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $page->add($setting);
 
     // Linkdin url setting.
-    $name = 'theme_standarmoovePruebas/linkedin';
-    $title = get_string('linkedin', 'theme_standarmoovePruebas');
-    $description = get_string('linkedindesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/linkedin';
+    $title = get_string('linkedin', 'theme_standarmoovepruebas');
+    $description = get_string('linkedindesc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $page->add($setting);
 
     // Youtube url setting.
-    $name = 'theme_standarmoovePruebas/youtube';
-    $title = get_string('youtube', 'theme_standarmoovePruebas');
-    $description = get_string('youtubedesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/youtube';
+    $title = get_string('youtube', 'theme_standarmoovepruebas');
+    $description = get_string('youtubedesc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $page->add($setting);
 
     // Instagram url setting.
-    $name = 'theme_standarmoovePruebas/instagram';
-    $title = get_string('instagram', 'theme_standarmoovePruebas');
-    $description = get_string('instagramdesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/instagram';
+    $title = get_string('instagram', 'theme_standarmoovepruebas');
+    $description = get_string('instagramdesc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $page->add($setting);
 
     // Whatsapp url setting.
-    $name = 'theme_standarmoovePruebas/whatsapp';
-    $title = get_string('whatsapp', 'theme_standarmoovePruebas');
-    $description = get_string('whatsappdesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/whatsapp';
+    $title = get_string('whatsapp', 'theme_standarmoovepruebas');
+    $description = get_string('whatsappdesc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $page->add($setting);
 
     // Telegram url setting.
-    $name = 'theme_standarmoovePruebas/telegram';
-    $title = get_string('telegram', 'theme_standarmoovePruebas');
-    $description = get_string('telegramdesc', 'theme_standarmoovePruebas');
+    $name = 'theme_standarmoovepruebas/telegram';
+    $title = get_string('telegram', 'theme_standarmoovepruebas');
+    $description = get_string('telegramdesc', 'theme_standarmoovepruebas');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $page->add($setting);
 

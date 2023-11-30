@@ -26,7 +26,7 @@ If applicable, add screenshots to help explain your problem.
 **Your environment (please complete the following information):**
 
 - Moodle version: [e.g.Moodle 3.11+ (Build: 20210527)]
-- standarmoovePruebas version [e.g. standarmoovePruebas 3.9.18 (Build: 2020090200)]
+- standarmoovepruebas version [e.g. standarmoovepruebas 3.9.18 (Build: 2020090200)]
 - Browser [e.g. chrome, safari]
 
 **Additional context**

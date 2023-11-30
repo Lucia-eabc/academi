@@ -17,19 +17,19 @@
 /**
  * Theme helper to load a theme configuration.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_standarmoovePruebas\util;
+namespace theme_standarmoovepruebas\util;
 
 use theme_config;
 
 /**
  * Helper to load a theme configuration.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -52,7 +52,7 @@ class settings {
      * Class constructor
      */
     public function __construct() {
-        $this->theme = theme_config::load('standarmoovePruebas');
+        $this->theme = theme_config::load('standarmoovepruebas');
     }
 
     /**
@@ -137,7 +137,7 @@ class settings {
     public function frontpage_slideshow() {
         $templatecontext['slidercount'] = $this->slidercount;
 
-        $defaultimage = new \moodle_url('/theme/standarmoovePruebas/pix/default_slide.jpg');
+        $defaultimage = new \moodle_url('/theme/standarmoovepruebas/pix/default_slide.jpg');
         for ($i = 1, $j = 0; $i <= $templatecontext['slidercount']; $i++, $j++) {
             $sliderimage = "sliderimage{$i}";
             $slidertitle = "slidertitle{$i}";
@@ -165,7 +165,7 @@ class settings {
             $templatecontext['marketingheading'] = format_text($this->marketingheading, FORMAT_HTML);
             $templatecontext['marketingcontent'] = format_text($this->marketingcontent, FORMAT_HTML);
 
-            $defaultimage = new \moodle_url('/theme/standarmoovePruebas/pix/default_markegingicon.svg');
+            $defaultimage = new \moodle_url('/theme/standarmoovepruebas/pix/default_markegingicon.svg');
 
             for ($i = 1, $j = 0; $i < 5; $i++, $j++) {
                 $marketingicon = 'marketing' . $i . 'icon';

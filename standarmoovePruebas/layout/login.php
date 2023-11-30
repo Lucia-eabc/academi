@@ -15,16 +15,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A login page layout for the standarmoovePruebas theme.
+ * A login page layout for the standarmoovepruebas theme.
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$bodyattributes = $OUTPUT->body_attributes(['standarmoovePruebas-login']);
+$bodyattributes = $OUTPUT->body_attributes(['standarmoovepruebas-login']);
 
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
@@ -32,4 +32,4 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes
 ];
 
-echo $OUTPUT->render_from_template('theme_standarmoovePruebas/login', $templatecontext);
+echo $OUTPUT->render_from_template('theme_standarmoovepruebas/login', $templatecontext);

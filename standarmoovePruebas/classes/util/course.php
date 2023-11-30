@@ -17,12 +17,12 @@
 /**
  * Course class utility class
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_standarmoovePruebas\util;
+namespace theme_standarmoovepruebas\util;
 
 use moodle_url;
 use core_course_list_element;
@@ -32,7 +32,7 @@ use core_course_category;
 /**
  * Course class utility class
  *
- * @package    theme_standarmoovePruebas
+ * @package    theme_standarmoovepruebas
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -79,7 +79,7 @@ class course {
      * @return array
      */
     public function get_course_contacts() {
-        $theme = \theme_config::load('standarmoovePruebas');
+        $theme = \theme_config::load('standarmoovepruebas');
 
         $contacts = [];
         if ($this->course->has_course_contacts() && !($theme->settings->disableteacherspic)) {

@@ -1,10 +1,10 @@
 {
-  "name": "willianmano/moodle-theme_standarmoovePruebas",
+  "name": "willianmano/moodle-theme_standarmoovepruebas",
   "type": "moodle-theme",
   "require": {
     "composer/installers": "~1.0"
   },
   "extra": {
-    "installer-name": "standarmoovePruebas"
+    "installer-name": "standarmoovepruebas"
   }
 }
